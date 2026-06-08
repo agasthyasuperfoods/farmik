@@ -28,13 +28,13 @@ export default function CompanyStatsSection() {
     <section className="w-full py-16 px-4 md:px-10 bg-[var(--main-bg)]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center min-h-[400px]">
         {/* Left: Image */}
-        <div className="h-full flex items-center justify-center">
-          <div className="relative w-full h-[400px] rounded-2xl shadow-lg overflow-hidden">
+        <div className="h-full flex items-center justify-center w-full">
+          <div className="relative w-full aspect-[1.8/1] rounded-2xl shadow-lg overflow-hidden bg-white">
             <Image
-              src="/bigbanner.webp"
+              src="/Cover page Banner.png"
               alt="Farmik Global Facility"
               fill
-              className="object-cover"
+              className="object-contain p-2"
             />
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function CompanyStatsSection() {
   {highlights.map((item, index) => (
     <div
       key={index}
-      className="bg-[var(--card-bg)] px-4 py-3 rounded-xl shadow-sm border border-gray-200 flex items-center gap-4"
+      className="bg-[var(--card-bg)] px-4 py-3 rounded-xl shadow-sm border border-[var(--border-warm)] flex items-center gap-4"
     >
       <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center shadow-md shrink-0">
         {item.icon}

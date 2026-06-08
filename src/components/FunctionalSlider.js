@@ -1,100 +1,96 @@
-'use client';
+"use client";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import 'swiper/css';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
-const slides = [
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+const banners = [
   {
-    title: 'Wholeness in Every Bite',
-    description:
-      'Start your day strong with quinoa, millet, berries & nut-packed mueslis. High-fiber, low-carb cereals designed for vitality.',
-    img: '/breakfast.png',
-    cta: 'Shop Cereals',
+    name: "Millet Muesli",
+    img: "/Banners/Millet Muesli Banner.png",
   },
   {
-    title: 'Snack Smart, Live Better',
-    description:
-      'Binge without guilt — our chips, curls, balls & veggie sticks are baked, protein-rich and powered by ancient grains.',
-    img: '/snacks.png',
-    cta: 'Shop Snacks',
+    name: "Milk Mixes",
+    img: "/Banners/Milk Mixes Banner.png",
   },
   {
-    title: 'Fuel Your Day Naturally',
-    description:
-      'Crunch into quinoa flakes — packed with protein, fiber, and clean energy. A perfect start for modern mornings.',
-    img: '/cetrealflakesgrp.png',
-    cta: 'Explore Quinoa Flakes',
+    name: "Quinoa",
+    img: "/Banners/Quinoa Banner.png",
   },
   {
-    title: 'Bars That Go The Distance',
-    description:
-      'Plant-based bars that keep you energized — with no added sugar, just pure almonds, seeds & natural flavors.',
-    img: '/Barsbanner.webp',
-    cta: 'Shop Energy Bars',
+    name: "Snacks",
+    img: "/Banners/SNACKS Banner.png",
+  },
+  {
+    name: "Bars",
+    img: "/Banners/Bars Banner.png",
   },
 ];
 
 export default function FunctionalSlider() {
   return (
-    <section className="w-full min-h-screen bg-[#c7feff85] flex items-center">
-      <Swiper
-        modules={[Autoplay]}
-        autoplay={{ delay: 10000 }}
-        loop
-        className="w-full"
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl mx-auto px-6 md:px-12 py-20 gap-40 items-center">
-              
-              {/* Image Side */}
-              <motion.div
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, ease: 'easeOut' }}
-                className="flex justify-center md:justify-end"
-              >
-                <Image
-                  src={slide.img}
-                  alt={slide.title}
-                  width={500}
-                  height={400}
-                  className="object-contain"
-                />
-              </motion.div>
+    <section className="w-full bg-[var(--main-bg)] pt-12 lg:pt-16 pb-12 md:pb-16 px-4 md:px-8 lg:px-16">
+      <div className="max-w-7xl mx-auto">
+        {/* Title */}
+        <div className="text-center mb-10">
+          <span className="text-xs text-[var(--button-primary)] bg-green-50 px-3 py-1 rounded-full font-medium shadow-sm border border-green-100">
+            Premium Range
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mt-3 font-satoshi">
+            Our Premium Superfoods
+          </h2>
+          <p className="text-sm text-[var(--text-primary)] opacity-75 mt-1 max-w-xl mx-auto font-satoshi">
+            Formulated by combining nutritional science with traditional wellness.
+          </p>
+        </div>
 
-              {/* Text Side */}
-              <motion.div
-                className="space-y-6 flex flex-col justify-center items-start"
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-              >
-                <h2 className="text-4xl font-extrabold text-black">
-                  {slide.title}
-                </h2>
-                <p className="text-gray-700 text-lg max-w-md">
-                  {slide.description}
-                </p>
-
-                <div className="bg-white px-6 py-4 rounded-xl shadow-md border border-gray-200 max-w-md">
-                  <h3 className="text-lg font-semibold text-black mb-1">🌱 Naturally Nutritious. Delightfully Delicious.</h3>
-                  <p className="text-gray-700 mb-2 text-sm">
-                    From high-fiber cereals to plant-powered snacks, we focus on taste that fuels your day — without additives.
-                  </p>
-                  <button className="bg-[var(--button-primary)] text-white px-4 py-2 rounded font-medium text-sm shadow hover:scale-105 transition-transform">
-                    {slide.cta} →
-                  </button>
+        {/* Carousel Container */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white"
+        >
+          <Swiper
+            modules={[Autoplay, Navigation, Pagination]}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            loop={true}
+            navigation={true}
+            pagination={{ clickable: true }}
+            style={{
+              "--swiper-navigation-color": "#345A2B",
+              "--swiper-pagination-color": "#345A2B",
+              "--swiper-navigation-size": "28px",
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            {banners.map((banner, index) => (
+              <SwiperSlide key={index}>
+                <div className="relative w-full" style={{ paddingBottom: "35%" }}>
+                  <Image
+                    src={banner.img}
+                    alt={banner.name}
+                    fill
+                    priority={index === 0}
+                    unoptimized
+                    sizes="(max-width: 768px) 100vw, 100vw"
+                    className="object-cover object-center"
+                  />
                 </div>
-              </motion.div>
-
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
+      </div>
     </section>
   );
 }

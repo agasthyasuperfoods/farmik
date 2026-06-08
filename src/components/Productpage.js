@@ -1,0 +1,483 @@
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { Star } from "lucide-react";
+
+// Updated categories to match your new dedicated mockups
+const categoriesData = {
+  All: [],
+  Muesli: ["Millet Muesli", "Quinoa Muesli"],
+  Cereals: ["Millet Cereal Flakes", "Quinoa Flakes"],
+  Bars: ["Energy Bars", "Protein Bars", "Millet Bars"],
+  "Milk Mixes": ["Milk Mixes"],
+  Snacks: ["Quinoa Balls", "Porridges", "Wavy Chips", "Makhana"],
+};
+
+const categories = Object.keys(categoriesData);
+
+const productsData = [
+  // MILLET MUESLI
+  {
+    id: 1,
+    name: "Multi Millet Muesli - Berry Blast",
+    category: "Muesli",
+    subCategory: "Millet Muesli",
+    desc: "A crunchy burst of premium berries, multi-millets, and wholesome grains.",
+    image: "/mockups/Multi Millet Muesli - Berry Blast.png",
+  },
+  {
+    id: 2,
+    name: "Multi Millet Muesli - Nutty Crunchy",
+    category: "Muesli",
+    subCategory: "Millet Muesli",
+    desc: "Packed with crunchy nuts, seeds, and toasted multi-millet flakes.",
+    image: "/mockups/Multi Millet Muesli - Nutty Crunchy.png",
+  },
+  {
+    id: 3,
+    name: "Multi Millet Muesli - Dark Chocolate",
+    category: "Muesli",
+    subCategory: "Millet Muesli",
+    desc: "Indulgent Belgian dark chocolate blended with 30% millets and jumbo oats.",
+    image: "/mockups/Multi Millet Muesli - Dark Chocolate.png",
+  },
+
+  // QUINOA MUESLI & FLAKES
+  {
+    id: 4,
+    name: "Quinoa Muesli Fruit & Nut",
+    category: "Muesli",
+    subCategory: "Quinoa Muesli",
+    desc: "Premium quinoa flakes mixed with luscious fruits, honey, and crunchy nuts.",
+    image: "/mockups/Quinoa Muesli Fruit & Nut.png",
+  },
+  {
+    id: 5,
+    name: "Quinoa Choco Flakes",
+    category: "Cereals",
+    subCategory: "Quinoa Flakes",
+    desc: "Nutritious chocolatey quinoa flakes for a delicious, healthy morning.",
+    image: "/mockups/Quinoa Choco Flakes.png",
+  },
+  {
+    id: 6,
+    name: "Quinoa CF Honey & Almond",
+    category: "Cereals",
+    subCategory: "Quinoa Flakes",
+    desc: "Quinoa cereal flakes sweetened with natural honey and loaded with almond slices.",
+    image: "/mockups/Quinoa CF Honey & Almond.png",
+  },
+
+  // BARS
+  {
+    id: 7,
+    name: "Almond Choco Energy Bar",
+    category: "Bars",
+    subCategory: "Energy Bars",
+    desc: "Rich almond and chocolate energy bar for quick sustained energy.",
+    image: "/mockups/Almond Choco Energy Bar.png",
+  },
+  {
+    id: 8,
+    name: "Cranberry Choco Energy Bar",
+    category: "Bars",
+    subCategory: "Energy Bars",
+    desc: "Tart cranberries and dark chocolate crisps for an active lifestyle.",
+    image: "/mockups/Cranberry Choco Energy Bar.png",
+  },
+  {
+    id: 9,
+    name: "Meal Replacement Bar",
+    category: "Bars",
+    subCategory: "Protein Bars",
+    desc: "Wholesome, high-protein meal replacement bar with super grains and seeds.",
+    image: "/mockups/Meal Replacement Bar.png",
+  },
+  {
+    id: 10,
+    name: "Millet Bar - Peanut",
+    category: "Bars",
+    subCategory: "Millet Bars",
+    desc: "Savory and sweet peanut-millet bar, perfect for post-workout snacking.",
+    image: "/mockups/Millet Bar - Peanut.png",
+  },
+  {
+    id: 11,
+    name: "Millet Bar - Fruit & Berries",
+    category: "Bars",
+    subCategory: "Millet Bars",
+    desc: "Enriched with natural berries, dates, and puffed millets.",
+    image: "/mockups/Millet Bar - Fruit & Berries.png",
+  },
+  {
+    id: 12,
+    name: "Millet Bar - Seeds & Nuts",
+    category: "Bars",
+    subCategory: "Millet Bars",
+    desc: "Nutrient-dense bar loaded with pumpkin seeds, sunflower seeds, and almonds.",
+    image: "/mockups/Millet Bar - Seeds & Nuts.png",
+  },
+
+  // MILLET CEREAL FLAKES
+  {
+    id: 13,
+    name: "Sorghum Millet Cereal Flakes",
+    category: "Cereals",
+    subCategory: "Millet Cereal Flakes",
+    desc: "Crispy, wholesome flakes made from 100% natural sorghum millet.",
+    image: "/mockups/Millet CF- Sorghum Millet.png",
+  },
+  {
+    id: 14,
+    name: "Finger Millet Cereal Flakes",
+    category: "Cereals",
+    subCategory: "Millet Cereal Flakes",
+    desc: "Calcium-rich ragi (finger millet) flakes for a powerful start to your day.",
+    image: "/mockups/Millet CF- Finger Millet.png",
+  },
+  {
+    id: 15,
+    name: "Pearl Millet Cereal Flakes",
+    category: "Cereals",
+    subCategory: "Millet Cereal Flakes",
+    desc: "Iron-rich bajra (pearl millet) flakes to keep you energized all day.",
+    image: "/mockups/Millet CF- Pearl Millet.png",
+  },
+
+  // MILK MIXES
+  {
+    id: 16,
+    name: "Multigrain Mix Powder - Vanilla",
+    category: "Milk Mixes",
+    subCategory: "Milk Mixes",
+    desc: "Delicious vanilla-flavored multigrain health mix powder.",
+    image: "/mockups/Multigrain Mix Powder- Vanilla.png",
+  },
+  {
+    id: 17,
+    name: "Multigrain Mix Powder - Strawberry",
+    category: "Milk Mixes",
+    subCategory: "Milk Mixes",
+    desc: "Refreshing strawberry-infused multigrain nutrition drink mix.",
+    image: "/mockups/Multigrain Mix Powder- Strawberry.png",
+  },
+
+  // SNACKS: Quinoa Balls
+  {
+    id: 18,
+    name: "Quinoa Balls - Desi Masala",
+    category: "Snacks",
+    subCategory: "Quinoa Balls",
+    desc: "Spicy and tangy Indian masala-flavored roasted quinoa balls.",
+    image: "/mockups/Quinoa Balls- Desi Masala.png",
+  },
+  {
+    id: 19,
+    name: "Quinoa Balls - Korean BBQ",
+    category: "Snacks",
+    subCategory: "Quinoa Balls",
+    desc: "Sweet and savory Korean BBQ-style seasoned quinoa balls.",
+    image: "/mockups/Quinoa Balls- Korean BBQ.png",
+  },
+
+  // SNACKS: Porridges
+  {
+    id: 20,
+    name: "Millet Porridge - Mixed Fruit & Chocolate",
+    category: "Snacks",
+    subCategory: "Porridges",
+    desc: "Nutritious chocolate porridge mixed with real dehydrated fruit pieces.",
+    image: "/mockups/Millet Porridge- Mixed Fruit & Chocolate.png",
+  },
+  {
+    id: 21,
+    name: "Millet Porridge - Mixed Vegetables",
+    category: "Snacks",
+    subCategory: "Porridges",
+    desc: "Savory veggie-loaded millet porridge for a warm, comforting meal.",
+    image: "/mockups/Millet Porridge- Mixed Vegetables.png",
+  },
+  {
+    id: 22,
+    name: "Millet Porridge - Apple & Cinnamon",
+    category: "Snacks",
+    subCategory: "Porridges",
+    desc: "Classic sweet porridge loaded with apple flavor and a hint of cinnamon.",
+    image: "/mockups/Millet Porridge- Apple & Cinnamon.png",
+  },
+  {
+    id: 23,
+    name: "Millet Porridge - Tangy Tomato & Onion",
+    category: "Snacks",
+    subCategory: "Porridges",
+    desc: "Zesty Indian tomato-onion savory porridge mix.",
+    image: "/mockups/Millet Porridge- Tangy Tomato & Onion.png",
+  },
+
+  // SNACKS: Wavy Chips
+  {
+    id: 24,
+    name: "Wavy Chips - Peri Peri",
+    category: "Snacks",
+    subCategory: "Wavy Chips",
+    desc: "Crispy and spicy peri peri seasoned wavy millet chips.",
+    image: "/mockups/Wavy Chips- Peri Peri.png",
+  },
+  {
+    id: 25,
+    name: "Wavy Chips - Sour Cream & Onion",
+    category: "Snacks",
+    subCategory: "Wavy Chips",
+    desc: "Creamy sour cream and zesty onion-flavored healthy wavy chips.",
+    image: "/mockups/Wavy Chips- Sour Cream & Onion.png",
+  },
+
+  // SNACKS: Makhana
+  {
+    id: 26,
+    name: "Makhana - Cheese Cheddar",
+    category: "Snacks",
+    subCategory: "Makhana",
+    desc: "Gourmet white cheddar cheese seasoned crunchy roasted makhana.",
+    image: "/mockups/Makhana- Cheese Cheddar.png",
+  },
+  {
+    id: 27,
+    name: "Makhana - Peri Peri",
+    category: "Snacks",
+    subCategory: "Makhana",
+    desc: "Fiery peri peri seasoned premium roasted foxnuts.",
+    image: "/mockups/Makhana- Peri Peri.png",
+  },
+];
+
+const subCategorySideImages = {
+  "Millet Muesli": "/MILLET MUESLI.png",
+  "Quinoa Muesli": "/QUINOA.png",
+  "Quinoa Flakes": "/QUINOA.png",
+  "Millet Cereal Flakes": "/MILLETS.png",
+  "Energy Bars": "/BARS.png",
+  "Protein Bars": "/BARS.png",
+  "Millet Bars": "/BARS.png",
+  "Milk Mixes": "/MILK MIXES.png",
+  "Quinoa Balls": "/Quinoa balls.png",
+  Porridges: "/PORRIDGES.png",
+  "Wavy Chips": "/Wavy chips.png",
+  Makhana: "/Makhana.png",
+};
+
+const getProductBadge = (id) => {
+  switch (id) {
+    case 3:
+      return "Best Seller";
+    case 1:
+      return "Trending";
+    case 7:
+      return "High Energy";
+    case 9:
+      return "High Protein";
+    case 18:
+      return "New Launch";
+    case 24:
+      return "Popular Choice";
+    default:
+      return null;
+  }
+};
+
+const getProductRating = (id) => {
+  const ratings = {
+    1: { rate: "4.8", count: 94 },
+    2: { rate: "4.7", count: 48 },
+    3: { rate: "4.9", count: 185 },
+    4: { rate: "4.8", count: 32 },
+    5: { rate: "4.6", count: 27 },
+    6: { rate: "4.7", count: 19 },
+    7: { rate: "4.9", count: 112 },
+    8: { rate: "4.8", count: 64 },
+    9: { rate: "4.9", count: 140 },
+    10: { rate: "4.6", count: 28 },
+    11: { rate: "4.8", count: 53 },
+    12: { rate: "4.7", count: 41 },
+  };
+  return ratings[id] || { rate: (4.5 + (id % 5) * 0.1).toFixed(1), count: 12 + (id * 7) % 50 };
+};
+
+export default function PremiumFarmikProducts() {
+  const [filter, setFilter] = useState("All");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const cat = params.get("category");
+      if (cat && categoriesData[cat]) {
+        setFilter(cat);
+      }
+    }
+  }, []);
+
+  // Filter products based on selected tab
+  const activeProducts =
+    filter === "All"
+      ? productsData
+      : productsData.filter((p) => p.category === filter);
+
+  // Group by subCategory for the "Series" effect
+  const groupedBySub = activeProducts.reduce((acc, product) => {
+    const sub = product.subCategory || "General";
+    if (!acc[sub]) acc[sub] = [];
+    acc[sub].push(product);
+    return acc;
+  }, {});
+
+  return (
+    <div className="bg-[#F9F8F4] min-h-screen pt-24 md:pt-28 pb-16 font-satoshi">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+        {/* Editorial Header */}
+        <header className="text-center mb-16 max-w-3xl mx-auto">
+          <span className="text-[11px] tracking-[0.3em] uppercase text-brand-gold font-bold mb-4 block animate-fade-in">
+            Nourish Your Life, Naturally
+          </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-brand-black tracking-tight leading-none mb-6">
+            Curated <span className="text-brand-green italic font-normal font-serif">Nutrition.</span>
+          </h1>
+          <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto leading-relaxed">
+            Discover our premium range of wholesome superfoods, crafted with precision using sustainable organic ingredients.
+          </p>
+        </header>
+
+        {/* Categories Navigation */}
+        <nav className="flex justify-center flex-wrap gap-4 md:gap-8 mb-16 border-b border-gray-200/60 pb-2">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setFilter(cat)}
+              className={`relative pb-3 text-xs md:text-sm uppercase tracking-widest font-semibold transition-all duration-300 cursor-pointer ${
+                filter === cat
+                  ? "text-brand-green font-extrabold scale-105"
+                  : "text-gray-400 hover:text-brand-black"
+              }`}
+            >
+              {cat}
+              {filter === cat && (
+                <motion.div
+                  layoutId="activeCategoryIndicator"
+                  className="absolute bottom-0 left-0 right-0 h-[3px] bg-brand-green rounded-full"
+                  transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                />
+              )}
+            </button>
+          ))}
+        </nav>
+
+        {/* Main Products Grid */}
+        <main className="space-y-24">
+          {Object.entries(groupedBySub).map(([subName, products]) => (
+            <section
+              key={subName}
+              className="relative flex flex-col lg:flex-row items-start gap-10 lg:gap-14 border-b border-gray-100 pb-20 last:border-none last:pb-0"
+            >
+              {/* STICKY SIDE HERO CARD */}
+              <div className="w-full lg:w-[300px] shrink-0 lg:sticky lg:top-28">
+                <div className="bg-brand-green rounded-3xl p-8 flex flex-col justify-between text-white shadow-md hover:shadow-xl transition-all duration-500 h-[520px] relative overflow-hidden group border border-black/5">
+                  {/* Subtle Background Pattern */}
+                  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+                  
+                  {/* Category Info at the TOP */}
+                  <div className="relative z-10">
+                    <span className="text-[10px] tracking-widest uppercase text-brand-gold mb-3 block font-bold">
+                      {products[0].category}
+                    </span>
+                    <h2 className="text-3xl font-bold font-serif mb-4 capitalize tracking-tight leading-tight">
+                      {subName}
+                      <span className="block text-brand-gold font-normal italic text-lg tracking-wide mt-1">
+                        Series
+                      </span>
+                    </h2>
+                    <p className="text-xs text-green-50/80 leading-relaxed font-normal mb-6">
+                      Wholesome {subName} selection carefully curated to preserve clean, pure nutrients.
+                    </p>
+                  </div>
+
+                  {/* Image – fills the card directly, no white box */}
+                  <div className="relative w-full h-56 flex-shrink-0">
+                    <Image
+                      src={subCategorySideImages[subName] || "/Cereal.jpeg"}
+                      alt={`${subName} Category Visual`}
+                      fill
+                      unoptimized
+                      sizes="300px"
+                      className="object-contain drop-shadow-xl"
+                      priority
+                    />
+                  </div>
+
+                </div>
+              </div>
+
+              {/* CLEAN PRODUCT GRID */}
+              <div className="flex-1 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <AnimatePresence mode="popLayout">
+                  {products.map((product) => (
+                    <motion.div
+                      layout
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.4 }}
+                      key={product.id}
+                      className="bg-white rounded-3xl p-5 flex flex-col group border border-gray-150/70 hover:border-brand-green/20 hover:shadow-xl transition-all duration-300"
+                    >
+                      {/* Product Image */}
+                      <div className="relative aspect-square bg-transparent rounded-2xl overflow-hidden flex items-center justify-center mb-5">
+                        {getProductBadge(product.id) && (
+                          <span className="absolute top-3 left-3 z-10 bg-brand-green text-white text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+                            {getProductBadge(product.id)}
+                          </span>
+                        )}
+                        {product.image ? (
+                          <Image
+                            src={product.image}
+                            alt={product.name}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 300px"
+                            className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                          />
+                        ) : (
+                          <span className="text-gray-300 font-bold tracking-widest uppercase text-xs">
+                            Farmik
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Product Details */}
+                      <div className="flex-1 flex flex-col">
+                        <h3 className="text-lg md:text-xl font-bold text-brand-black mb-2 group-hover:text-brand-green transition-colors duration-200">
+                          {product.name}
+                        </h3>
+                        <p className="text-xs text-gray-500 line-clamp-2 mb-6 leading-relaxed">
+                          {product.desc}
+                        </p>
+
+                        <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
+                          <button 
+                            onClick={() => window.location.href = `/contact?subject=Inquiry about ${encodeURIComponent(product.name)}`}
+                            className="bg-brand-green hover:bg-brand-green-hover text-white font-bold text-[10px] tracking-wider uppercase px-4 py-2 rounded-full cursor-pointer transition-all duration-200 shadow-sm hover:shadow"
+                          >
+                            ENQUIRE NOW
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+              </div>
+            </section>
+          ))}
+        </main>
+      </div>
+    </div>
+  );
+}
+

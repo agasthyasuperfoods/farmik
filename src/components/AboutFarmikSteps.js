@@ -45,9 +45,12 @@ export default function AboutFarmikSteps() {
           <p className="text-[var(--text-primary)] text-base md:text-lg mb-6 font-satoshi">
             At Farmik, our strength lies in vertically integrated, globally coordinated facilities — delivering high-quality, health-focused nutrition across borders.
           </p>
-          -<button className="inline-flex items-center text-bold bg-green-100 gap-2 px-5 py-3  rounded-full shadow transition">
+          <button
+            onClick={() => window.location.href = '/product'}
+            className="inline-flex items-center gap-2 px-5 py-3 bg-[#345A2B] text-white text-sm font-bold rounded-full shadow-sm hover:bg-[#25421F] transition-all duration-200 cursor-pointer"
+          >
             Explore Our Products
-            <ArrowUpRight size={18} />
+            <ArrowUpRight size={16} />
           </button>
         </div>
 
@@ -73,7 +76,7 @@ export default function AboutFarmikSteps() {
               >
                 {/* Icon Diamond */}
                 <div className="min-w-[32px] flex justify-center">
-                  <div className="w-3 h-3 rotate-45 bg-[var(--highlight)] shadow-sm" />
+                  <div className="w-3 h-3 rotate-45 bg-[#345A2B] shadow-sm" />
                 </div>
 
                 {/* Text Block */}

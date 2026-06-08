@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 
 function Organic() {
   return (
-    <div className="px-4 sm:px-12 py-16 lg:px-20 bg-white">
+    <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16 bg-white">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-20 text-gray-800">
         Our Organic Farm in Talakondapally
       </h1>
@@ -29,7 +29,7 @@ function Organic() {
           className="block h-full transform transition-transform duration-300 hover:scale-105"
         >
           <div className="bg-white rounded-2xl p-4 relative h-full flex flex-col justify-between shadow-md">
-            <div className="absolute top-4 right-4 bg-black text-white p-2 rounded-full">
+            <div className="absolute top-4 right-4 bg-[#345A2B] text-white p-2 rounded-full">
               <ArrowUpRight size={16} />
             </div>
             <div className="pt-10">
@@ -64,7 +64,7 @@ function Organic() {
           className="block h-full transform transition-transform duration-300 hover:scale-105"
         >
           <div className="bg-[var(--button-primary)] text-white rounded-2xl p-4 relative h-full flex flex-col justify-between shadow-md">
-            <div className="absolute top-4 right-4 bg-black text-white p-2 rounded-full">
+            <div className="absolute top-4 right-4 bg-[#345A2B] text-white p-2 rounded-full">
               <ArrowUpRight size={16} />
             </div>
             <div className="pt-10">

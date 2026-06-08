@@ -12,7 +12,7 @@ const certData = [
     more: "This ensures that all raw materials, preparation methods, and handling comply with Islamic dietary laws and are verified by accredited Halal bodies.",
   },
   {
-    img: "https://floridafood.com/wp-content/uploads/2022/02/HACCP-Certification-Logo-for-News-webpage.jpg",
+    img: "haccp.png",
     preview: "/haccp.jpg",
     title: "HACCP Certified",
     desc: "Complies with European Union standards for organic food production.",
@@ -57,13 +57,16 @@ export default function Certified() {
   };
 
   return (
-    <section className="py-8 px-4 bg-white mt-16 relative">
+    <section className="py-10 md:py-14 px-4 md:px-8 lg:px-16 bg-[var(--main-bg)] relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold tracking-wide text-gray-800">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#345A2B] bg-[#EBF7E3] px-4 py-1.5 rounded-full border border-[#DCEFD0] shadow-sm mb-3">
+            Globally Trusted
+          </div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[var(--text-primary)] font-satoshi">
             Our Certifications Say It All
           </h2>
-          <p className="text-gray-600 mt-1 mb-16 max-w-2xl mx-auto text-sm">
+          <p className="text-gray-500 mt-2 mb-0 max-w-2xl mx-auto text-sm">
             We comply with internationally recognized quality and safety standards to ensure absolute trust and compliance.
           </p>
         </div>
@@ -74,7 +77,7 @@ export default function Certified() {
               key={index}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="rounded-lg bg-white p-3 border border-gray-200"
+              className="rounded-lg bg-white p-3 border border-[var(--border-warm)]"
             >
               <div className="relative w-full h-44 mb-3 rounded overflow-hidden">
                 <div
@@ -109,7 +112,7 @@ export default function Certified() {
                 )}
                 <button
                   onClick={() => toggleReadMore(index)}
-                  className="text-[rgb(157,37,45)] text-sm font-medium  ml-1 inline"
+                  className="text-[#345A2B] text-sm font-semibold ml-1 inline hover:underline"
                 >
                   {expandedIndex === index ? "Read Less" : "Read More"}
                 </button>
