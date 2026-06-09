@@ -84,12 +84,7 @@ export default function LatestLaunch() {
                   ))}
                 </div>
 
-                {/* Action button */}
-                <div>
-                  <button className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--button-primary)] hover:opacity-85 transition-opacity">
-                    Learn More <ArrowRight size={16} />
-                  </button>
-                </div>
+
               </div>
             </motion.div>
           ))}

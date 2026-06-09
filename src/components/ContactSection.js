@@ -190,7 +190,7 @@ export default function ContactSection() {
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-green-200/70 font-semibold mb-3">Office Hours</p>
                   <p className="text-sm font-semibold">Monday – Saturday</p>
-                  <p className="text-xs text-green-100/70 mt-0.5">9:00 AM – 6:00 PM IST</p>
+                  <p className="text-xs text-green-100/70 mt-0.5">10:00 AM – 6:00 PM IST</p>
                 </div>
               </div>
             </motion.div>

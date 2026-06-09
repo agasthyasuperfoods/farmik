@@ -88,16 +88,7 @@ export default function Footer() {
           <h4 className="text-white font-bold text-sm tracking-wider uppercase font-satoshi">Follow Us</h4>
           <div className="flex justify-center md:justify-start space-x-3">
             <a 
-              href="https://www.facebook.com/profile.php?id=61576634257472" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              aria-label="Facebook"
-              className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#345A2B] hover:text-white flex items-center justify-center text-stone-300 transition-all duration-300 hover:scale-105"
-            >
-              <FaFacebookF size={14} />
-            </a>
-            <a 
-              href="https://www.instagram.com/mr.flakesnutrix/" 
+              href="https://www.instagram.com/farmik_official/" 
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label="Instagram"

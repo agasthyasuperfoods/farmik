@@ -6,6 +6,8 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { useRouter } from "next/navigation";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -15,26 +17,33 @@ const banners = [
   {
     name: "Millet Muesli",
     img: "/Banners/Millet Muesli Banner.png",
+    link: "/product?category=Muesli",
   },
   {
     name: "Milk Mixes",
     img: "/Banners/Milk Mixes Banner.png",
+    link: "/product?category=Milk Mixes",
   },
   {
     name: "Quinoa",
     img: "/Banners/Quinoa Banner.png",
+    link: "/product?category=Cereals",
   },
   {
     name: "Snacks",
     img: "/Banners/SNACKS Banner.png",
+    link: "/product?category=Snacks",
   },
   {
     name: "Bars",
     img: "/Banners/Bars Banner.png",
+    link: "/product?category=Bars",
   },
 ];
 
 export default function FunctionalSlider() {
+  const router = useRouter();
+
   return (
     <section className="w-full bg-[var(--main-bg)] pt-12 lg:pt-16 pb-12 md:pb-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
@@ -75,7 +84,11 @@ export default function FunctionalSlider() {
           >
             {banners.map((banner, index) => (
               <SwiperSlide key={index}>
-                <div className="relative w-full" style={{ paddingBottom: "35%" }}>
+                <div 
+                  className="relative w-full cursor-pointer group" 
+                  style={{ paddingBottom: "35%" }}
+                  onClick={() => router.push(banner.link)}
+                >
                   <Image
                     src={banner.img}
                     alt={banner.name}
@@ -83,7 +96,7 @@ export default function FunctionalSlider() {
                     priority={index === 0}
                     unoptimized
                     sizes="(max-width: 768px) 100vw, 100vw"
-                    className="object-cover object-center"
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.015]"
                   />
                 </div>
               </SwiperSlide>

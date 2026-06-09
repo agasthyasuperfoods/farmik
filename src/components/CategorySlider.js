@@ -9,7 +9,7 @@ export default function CategorySlider() {
   const categories = [
     {
       label: "Millet",
-      category: "Millet",
+      category: "Muesli",
       image: "/cateogories/MILLET.png",
     },
     {
@@ -19,7 +19,7 @@ export default function CategorySlider() {
     },
     {
       label: "Quinoa",
-      category: "Quinoa",
+      category: "Cereals",
       image: "/cateogories/QUINOA.png",
     },
     {
