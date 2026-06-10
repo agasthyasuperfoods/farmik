@@ -54,11 +54,11 @@ export default function ProductCard() {
         {/* Product Image */}
         <div className="flex justify-center">
           <Image
-            src="/mockups/Multi Millet Muesli - Dark Chocolate.png"
+            src="/productmockups/MILLET MUESLI/Multi Millet Muesli - Dark Chocolate.png"
             alt="Mr. Flakes Dark Chocolate Millet Muesli"
-            width={320}
-            height={400}
-            className="object-contain drop-shadow-xl rounded-2xl"
+            width={380}
+            height={480}
+            className="object-contain drop-shadow-xl rounded-2xl hover:scale-105 transition-transform duration-500"
             priority
           />
         </div>

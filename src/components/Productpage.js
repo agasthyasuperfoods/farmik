@@ -24,7 +24,7 @@ const productsData = [
     category: "Muesli",
     subCategory: "Millet Muesli",
     desc: "A crunchy burst of premium berries, multi-millets, and wholesome grains.",
-    image: "/mockups/Multi Millet Muesli - Berry Blast.png",
+    image: "/productmockups/MILLET MUESLI/Multi Millet Muesli - Berry Blast.png",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const productsData = [
     category: "Muesli",
     subCategory: "Millet Muesli",
     desc: "Packed with crunchy nuts, seeds, and toasted multi-millet flakes.",
-    image: "/mockups/Multi Millet Muesli - Nutty Crunchy.png",
+    image: "/productmockups/MILLET MUESLI/Multi Millet Muesli - Nutty Crunchy.png",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const productsData = [
     category: "Muesli",
     subCategory: "Millet Muesli",
     desc: "Indulgent Belgian dark chocolate blended with 30% millets and jumbo oats.",
-    image: "/mockups/Multi Millet Muesli - Dark Chocolate.png",
+    image: "/productmockups/MILLET MUESLI/Multi Millet Muesli - Dark Chocolate.png",
   },
 
   // QUINOA MUESLI & FLAKES
@@ -50,7 +50,7 @@ const productsData = [
     category: "Muesli",
     subCategory: "Quinoa Muesli",
     desc: "Premium quinoa flakes mixed with luscious fruits, honey, and crunchy nuts.",
-    image: "/mockups/Quinoa Muesli Fruit & Nut.png",
+    image: "/productmockups/QUINOA/Quinoa Muesli Fruit & Nut.png",
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const productsData = [
     category: "Cereals",
     subCategory: "Quinoa Flakes",
     desc: "Nutritious chocolatey quinoa flakes for a delicious, healthy morning.",
-    image: "/mockups/Quinoa Choco Flakes.png",
+    image: "/productmockups/QUINOA/Quinoa Choco Flakes.png",
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ const productsData = [
     category: "Cereals",
     subCategory: "Quinoa Flakes",
     desc: "Quinoa cereal flakes sweetened with natural honey and loaded with almond slices.",
-    image: "/mockups/Quinoa CF Honey & Almond.png",
+    image: "/productmockups/QUINOA/Quinoa CF- Honey & Almond.png",
   },
 
   // BARS
@@ -76,7 +76,7 @@ const productsData = [
     category: "Bars",
     subCategory: "Energy Bars",
     desc: "Rich almond and chocolate energy bar for quick sustained energy.",
-    image: "/mockups/Almond Choco Energy Bar.png",
+    image: "/productmockups/BARS/Energy Bars/Almond Choco Energy Bar.png",
   },
   {
     id: 8,
@@ -84,7 +84,7 @@ const productsData = [
     category: "Bars",
     subCategory: "Energy Bars",
     desc: "Tart cranberries and dark chocolate crisps for an active lifestyle.",
-    image: "/mockups/Cranberry Choco Energy Bar.png",
+    image: "/productmockups/BARS/Energy Bars/Cranberry Choco Energy Bar.png",
   },
   {
     id: 9,
@@ -92,7 +92,7 @@ const productsData = [
     category: "Bars",
     subCategory: "Protein Bars",
     desc: "Wholesome, high-protein meal replacement bar with super grains and seeds.",
-    image: "/mockups/Meal Replacement Bar.png",
+    image: "/productmockups/BARS/Protein Bars/Meal Replacement Bar.png",
   },
   {
     id: 10,
@@ -100,7 +100,7 @@ const productsData = [
     category: "Bars",
     subCategory: "Millet Bars",
     desc: "Savory and sweet peanut-millet bar, perfect for post-workout snacking.",
-    image: "/mockups/Millet Bar - Peanut.png",
+    image: "/productmockups/BARS/Millet Bars/Millet Bar - Peanut.png",
   },
   {
     id: 11,
@@ -108,7 +108,7 @@ const productsData = [
     category: "Bars",
     subCategory: "Millet Bars",
     desc: "Enriched with natural berries, dates, and puffed millets.",
-    image: "/mockups/Millet Bar - Fruit & Berries.png",
+    image: "/productmockups/BARS/Millet Bars/Millet Bar - Fruit & Berries.png",
   },
   {
     id: 12,
@@ -116,7 +116,7 @@ const productsData = [
     category: "Bars",
     subCategory: "Millet Bars",
     desc: "Nutrient-dense bar loaded with pumpkin seeds, sunflower seeds, and almonds.",
-    image: "/mockups/Millet Bar - Seeds & Nuts.png",
+    image: "/productmockups/BARS/Millet Bars/Millet Bar - Seeds & Nuts.png",
   },
 
   // MILLET CEREAL FLAKES
@@ -126,7 +126,7 @@ const productsData = [
     category: "Cereals",
     subCategory: "Millet Cereal Flakes",
     desc: "Crispy, wholesome flakes made from 100% natural sorghum millet.",
-    image: "/mockups/Millet CF- Sorghum Millet.png",
+    image: "/productmockups/MILLET CEREAL FLAKES/Millet CF - Sorghum Millet.png",
   },
   {
     id: 14,
@@ -134,7 +134,7 @@ const productsData = [
     category: "Cereals",
     subCategory: "Millet Cereal Flakes",
     desc: "Calcium-rich ragi (finger millet) flakes for a powerful start to your day.",
-    image: "/mockups/Millet CF- Finger Millet.png",
+    image: "/productmockups/MILLET CEREAL FLAKES/Millet CF- Finger Millet.png",
   },
   {
     id: 15,
@@ -142,7 +142,7 @@ const productsData = [
     category: "Cereals",
     subCategory: "Millet Cereal Flakes",
     desc: "Iron-rich bajra (pearl millet) flakes to keep you energized all day.",
-    image: "/mockups/Millet CF- Pearl Millet.png",
+    image: "/productmockups/MILLET CEREAL FLAKES/Millet CF- Pearl Millet.png",
   },
 
   // MILK MIXES
@@ -152,7 +152,7 @@ const productsData = [
     category: "Milk Mixes",
     subCategory: "Milk Mixes",
     desc: "Delicious vanilla-flavored multigrain health mix powder.",
-    image: "/mockups/Multigrain Mix Powder- Vanilla.png",
+    image: "/productmockups/MILK MIXES/Multigrain Mix Powder- Vanilla.png",
   },
   {
     id: 17,
@@ -160,7 +160,7 @@ const productsData = [
     category: "Milk Mixes",
     subCategory: "Milk Mixes",
     desc: "Refreshing strawberry-infused multigrain nutrition drink mix.",
-    image: "/mockups/Multigrain Mix Powder- Strawberry.png",
+    image: "/productmockups/MILK MIXES/Multigrain Mix Powder- Strawberry.png",
   },
 
   // SNACKS: Quinoa Balls
@@ -170,7 +170,7 @@ const productsData = [
     category: "Snacks",
     subCategory: "Quinoa Balls",
     desc: "Spicy and tangy Indian masala-flavored roasted quinoa balls.",
-    image: "/mockups/Quinoa Balls- Desi Masala.png",
+    image: "/productmockups/SNACKS/Quinoa Balls/Quinoa Balls- Desi Masala.png",
   },
   {
     id: 19,
@@ -178,7 +178,7 @@ const productsData = [
     category: "Snacks",
     subCategory: "Quinoa Balls",
     desc: "Sweet and savory Korean BBQ-style seasoned quinoa balls.",
-    image: "/mockups/Quinoa Balls- Korean BBQ.png",
+    image: "/productmockups/SNACKS/Quinoa Balls/Quinoa Balls- Korean BBQ.png",
   },
 
   // SNACKS: Porridges
@@ -188,7 +188,7 @@ const productsData = [
     category: "Snacks",
     subCategory: "Porridges",
     desc: "Nutritious chocolate porridge mixed with real dehydrated fruit pieces.",
-    image: "/mockups/Millet Porridge- Mixed Fruit & Chocolate.png",
+    image: "/productmockups/SNACKS/Porridges/Millet Porridge- Mixed Fruit & Chocolate.png",
   },
   {
     id: 21,
@@ -196,7 +196,7 @@ const productsData = [
     category: "Snacks",
     subCategory: "Porridges",
     desc: "Savory veggie-loaded millet porridge for a warm, comforting meal.",
-    image: "/mockups/Millet Porridge- Mixed Vegetables.png",
+    image: "/productmockups/SNACKS/Porridges/Millet Porridge- Mixed Vegetables.png",
   },
   {
     id: 22,
@@ -204,7 +204,7 @@ const productsData = [
     category: "Snacks",
     subCategory: "Porridges",
     desc: "Classic sweet porridge loaded with apple flavor and a hint of cinnamon.",
-    image: "/mockups/Millet Porridge- Apple & Cinnamon.png",
+    image: "/productmockups/SNACKS/Porridges/Millet Porridge- Apple & Cinnamon.png",
   },
   {
     id: 23,
@@ -212,7 +212,7 @@ const productsData = [
     category: "Snacks",
     subCategory: "Porridges",
     desc: "Zesty Indian tomato-onion savory porridge mix.",
-    image: "/mockups/Millet Porridge- Tangy Tomato & Onion.png",
+    image: "/productmockups/SNACKS/Porridges/Millet Porridge- Tangy Tomato & Onion.png",
   },
 
   // SNACKS: Wavy Chips
@@ -222,7 +222,7 @@ const productsData = [
     category: "Snacks",
     subCategory: "Wavy Chips",
     desc: "Crispy and spicy peri peri seasoned wavy millet chips.",
-    image: "/mockups/Wavy Chips- Peri Peri.png",
+    image: "/productmockups/SNACKS/Wavy Chips/Wavy Chips- Peri Peri.png",
   },
   {
     id: 25,
@@ -230,7 +230,7 @@ const productsData = [
     category: "Snacks",
     subCategory: "Wavy Chips",
     desc: "Creamy sour cream and zesty onion-flavored healthy wavy chips.",
-    image: "/mockups/Wavy Chips- Sour Cream & Onion.png",
+    image: "/productmockups/SNACKS/Wavy Chips/Wavy Chips- Sour Cream & Onion.png",
   },
 
   // SNACKS: Makhana
@@ -240,7 +240,7 @@ const productsData = [
     category: "Snacks",
     subCategory: "Makhana",
     desc: "Gourmet white cheddar cheese seasoned crunchy roasted makhana.",
-    image: "/mockups/Makhana- Cheese Cheddar.png",
+    image: "/productmockups/SNACKS/MAKHANA/Makhana- Cheese Cheddar.png",
   },
   {
     id: 27,
@@ -248,7 +248,7 @@ const productsData = [
     category: "Snacks",
     subCategory: "Makhana",
     desc: "Fiery peri peri seasoned premium roasted foxnuts.",
-    image: "/mockups/Makhana- Peri Peri.png",
+    image: "/productmockups/SNACKS/MAKHANA/Makhana- Peri Peri.png",
   },
 ];
 
@@ -401,7 +401,7 @@ export default function PremiumFarmikProducts() {
                   </div>
 
                   {/* Image – fills the card directly, no white box */}
-                  <div className="relative w-full h-56 flex-shrink-0">
+                  <div className="relative w-full h-64 flex-shrink-0">
                     <Image
                       src={subCategorySideImages[subName] || "/Cereal.jpeg"}
                       alt={`${subName} Category Visual`}
@@ -442,7 +442,7 @@ export default function PremiumFarmikProducts() {
                             alt={product.name}
                             fill
                             sizes="(max-width: 768px) 100vw, 300px"
-                            className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                            className="object-contain p-1 transition-transform duration-500 group-hover:scale-110"
                           />
                         ) : (
                           <span className="text-gray-300 font-bold tracking-widest uppercase text-xs">

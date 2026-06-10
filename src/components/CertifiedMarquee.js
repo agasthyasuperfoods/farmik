@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function CertifiedMarquee() {
   const certs = [
-    "https://qltysys.com/wp-content/uploads/2021/01/22000-2018-1.png",
-    "haccp.png",
-    "https://www.certification-india.com/wp-content/uploads/food-safety-and-standards-authority-of-india-logo.png",
+    "/iso22000.png",
+    "/haccp.png",
+    "/fssai.png",
     "/gmp.png",
-    "https://www.prepol.com/wp-content/uploads/2024/04/FDA-1.png",
+    "/fda.png",
     "/halal.png",
   ];
 

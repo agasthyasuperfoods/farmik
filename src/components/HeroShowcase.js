@@ -13,31 +13,31 @@ export default function HeroShowcase() {
     {
       name: "Berry Blast Muesli",
       tag: "Breakfast",
-      src: "/mockups/Multi Millet Muesli - Berry Blast.png",
+      src: "/productmockups/MILLET MUESLI/Multi Millet Muesli - Berry Blast.png",
       category: "Muesli"
     },
     {
       name: "Almond Choco Bar",
       tag: "Energy",
-      src: "/mockups/Almond Choco Energy Bar.png",
+      src: "/productmockups/BARS/Energy Bars/Almond Choco Energy Bar.png",
       category: "Bars"
     },
     {
       name: "Quinoa Choco Flakes",
       tag: "Cereals",
-      src: "/mockups/Quinoa Choco Flakes.png",
+      src: "/productmockups/QUINOA/Quinoa Choco Flakes.png",
       category: "Cereals"
     },
     {
       name: "Cheese Cheddar Makhana",
       tag: "Snacks",
-      src: "/mockups/Makhana- Cheese Cheddar.png",
+      src: "/productmockups/SNACKS/MAKHANA/Makhana- Cheese Cheddar.png",
       category: "Snacks"
     },
     {
       name: "Apple Cinnamon Porridge",
       tag: "Wellness",
-      src: "/mockups/Millet Porridge- Apple & Cinnamon.png",
+      src: "/productmockups/SNACKS/Porridges/Millet Porridge- Apple & Cinnamon.png",
       category: "Porridge"
     },
   ];
@@ -225,14 +225,14 @@ export default function HeroShowcase() {
                 </div>
  
                 {/* Product Mockup */}
-                <div className="relative w-full h-36 sm:h-44 my-2 flex items-center justify-center">
+                <div className="relative w-full h-40 sm:h-48 my-2 flex items-center justify-center">
                   <Image
                     src={product.src}
                     alt={product.name}
                     fill
                     sizes="(max-width: 768px) 33vw, 20vw"
                     unoptimized
-                    className="object-contain p-1.5 transition-transform duration-500 group-hover:scale-105"
+                    className="object-contain p-0 transition-transform duration-500 group-hover:scale-110"
                     priority
                   />
                 </div>

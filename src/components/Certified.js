@@ -5,42 +5,42 @@ import Image from "next/image";
 
 const certData = [
   {
-    img: "https://img.freepik.com/premium-vector/green-gradient-halal-food-certified-stamp-sticker-with-stars-vector-illustration_723710-407.jpg",
+    img: "/halal.png",
     preview: "/halal.jpeg",
     title: "Halal Certified",
     desc: "Certified for meeting Halal compliance in food safety and preparation processes.",
     more: "This ensures that all raw materials, preparation methods, and handling comply with Islamic dietary laws and are verified by accredited Halal bodies.",
   },
   {
-    img: "haccp.png",
+    img: "/haccp.png",
     preview: "/haccp.jpg",
     title: "HACCP Certified",
     desc: "Complies with European Union standards for organic food production.",
     more: "This certification confirms our commitment to sustainability and non-GMO, chemical-free farming practices aligned with EU regulations.",
   },
   {
-    img: "https://i.pinimg.com/736x/0c/42/43/0c42438b9ee32255e18497d14d024547.jpg",
+    img: "/gmp.png",
     preview: "/gmp.jpg",
     title: "GMP Certified",
     desc: "Accredited by the Japanese Agricultural Standards for organic agriculture.",
     more: "Our compliance with JAS ensures strict quality control and traceability in production, packaging, and distribution of organic goods.",
   },
   {
-    img: "https://www.certification-india.com/wp-content/uploads/food-safety-and-standards-authority-of-india-logo.png",
+    img: "/fssai.png",
     preview: "/fsscv.jpg",
     title: "FSSAI Approved",
     desc: "Licensed by the Food Safety and Standards Authority of India.",
     more: "FSSAI licensing ensures our products meet national hygiene, safety, and labeling standards before reaching Indian consumers.",
   },
   {
-    img: "https://www.prepol.com/wp-content/uploads/2024/04/FDA-1.png",
+    img: "/fda.png",
     preview: "/usfda.jpg",
     title: "US FDA",
     desc: "Registered with the U.S. Food and Drug Administration for export compliance.",
     more: "This reflects our eligibility for export into the U.S., assuring buyers of our adherence to FDA-monitored processes and food safety.",
   },
   {
-    img: "https://qltysys.com/wp-content/uploads/2021/01/22000-2018-1.png",
+    img: "/iso22000.png",
     preview: "/brc.jpg",
     title: "ISO 22000",
     desc: "Certified for international food safety management system standards.",

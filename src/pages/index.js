@@ -11,10 +11,21 @@ import NewsletterHero from '@/components/NewsletterHero'
 import Organic from '@/components/Organic'
 import ProductCard from '@/components/ProductCard'
 import React from 'react'
+import Head from 'next/head'
 
 function index() {
   return (
     <div className="bg-[#F9F8F4] min-h-screen flex flex-col">
+      <Head>
+        <title>Farmik | Elevating Wellness With Smart Nutrition</title>
+        <meta name="description" content="Explore Farmik's premium range of internationally certified organic superfoods, healthy grains, millets, and cereals. Made with love and ancient dietary wisdom." />
+        
+        {/* Favicon / Icon definitions for browsers & search engines */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="512x512" />
+        <link rel="apple-touch-icon" href="/icon.png" />
+      </Head>
+
       {/* Navigation */}
       <Menu />
 
