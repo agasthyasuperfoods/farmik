@@ -1,6 +1,4 @@
-"use client";
- 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Star, Shield, Leaf, Heart } from "lucide-react";
@@ -8,6 +6,16 @@ import { Star, Shield, Leaf, Heart } from "lucide-react";
 export default function HeroShowcase() {
   const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
   const [isDeckHovered, setIsDeckHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const products = [
     {
@@ -65,7 +73,7 @@ export default function HeroShowcase() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] leading-tight font-satoshi"
         >
-          Elevating Wellness <br className="hidden sm:inline" />
+          Farmik: Elevating Wellness <br className="hidden sm:inline" />
           With <span className="text-[#345A2B] italic font-serif font-normal">Smart Nutrition</span>
         </motion.h1>
  
@@ -109,7 +117,7 @@ export default function HeroShowcase() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="pt-6 grid grid-cols-3 gap-3 md:gap-4 border-t border-[var(--border-warm)]"
+          className="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 border-t border-[var(--border-warm)]"
         >
           <div className="flex items-center gap-2 bg-white/60 backdrop-blur-xs border border-[var(--border-warm)] px-3 py-2.5 rounded-2xl shadow-xs hover:shadow-sm transition-all duration-300">
             <Shield size={16} className="text-[#345A2B] shrink-0" />
@@ -156,7 +164,8 @@ export default function HeroShowcase() {
             
             if (isDeckHovered) {
               // Fanned coordinates
-              x = offsetFromCenter * 105;
+              const fanOffset = isMobile ? 55 : 105;
+              x = offsetFromCenter * fanOffset;
               y = Math.abs(offsetFromCenter) * 15;
               rotate = offsetFromCenter * 12;
               scale = 1.05;
@@ -164,25 +173,27 @@ export default function HeroShowcase() {
               if (isAnyHovered) {
                 if (isHovered) {
                   // Focused card floats up, expands, resets rotation
-                  y = -55;
+                  y = isMobile ? -35 : -55;
                   rotate = 0;
-                  scale = 1.15;
+                  scale = isMobile ? 1.1 : 1.15;
                   zIndex = 100;
                   opacity = 1;
                 } else {
                   // Other cards dim and push away from the hovered card
                   opacity = 0.45;
                   scale = 0.95;
+                  const pushOffset = isMobile ? 22 : 40;
                   if (index < hoveredCardIndex) {
-                    x -= 40;
+                    x -= pushOffset;
                   } else {
-                    x += 40;
+                    x += pushOffset;
                   }
                 }
               }
             } else {
               // Neatly overlapped stacked state with subtle offset
-              x = offsetFromCenter * 15;
+              const stackOffset = isMobile ? 10 : 15;
+              x = offsetFromCenter * stackOffset;
               y = Math.abs(offsetFromCenter) * 4;
               rotate = offsetFromCenter * 4;
               scale = 1 - Math.abs(offsetFromCenter) * 0.02;
@@ -211,7 +222,7 @@ export default function HeroShowcase() {
                   transformOrigin: "bottom center",
                   zIndex: zIndex
                 }}
-                className="absolute w-48 h-64 sm:w-56 sm:h-76 bg-white/95 backdrop-blur-md rounded-3xl border border-neutral-200/50 p-5 flex flex-col justify-between shadow-lg hover:border-[#345A2B]/35 hover:shadow-[0_20px_50px_rgba(52,90,43,0.12)] cursor-pointer transition-all duration-300"
+                className="absolute w-36 h-48 sm:w-48 sm:h-64 md:w-56 md:h-76 bg-white/95 backdrop-blur-md rounded-3xl border border-neutral-200/50 p-4 md:p-5 flex flex-col justify-between shadow-lg hover:border-[#345A2B]/35 hover:shadow-[0_20px_50px_rgba(52,90,43,0.12)] cursor-pointer transition-all duration-300"
                 onClick={() => {
                   window.location.href = `/product?category=${product.category}`;
                 }}

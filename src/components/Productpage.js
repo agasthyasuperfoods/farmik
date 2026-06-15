@@ -25,6 +25,7 @@ const productsData = [
     subCategory: "Millet Muesli",
     desc: "A crunchy burst of premium berries, multi-millets, and wholesome grains.",
     image: "/productmockups/MILLET MUESLI/Multi Millet Muesli - Berry Blast.png",
+    amazonLink: "https://www.amazon.in/dp/B0FP5742N7",
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ const productsData = [
     subCategory: "Millet Muesli",
     desc: "Packed with crunchy nuts, seeds, and toasted multi-millet flakes.",
     image: "/productmockups/MILLET MUESLI/Multi Millet Muesli - Nutty Crunchy.png",
+    amazonLink: "https://www.amazon.in/dp/B0GNMBLBRN",
   },
   {
     id: 3,
@@ -41,6 +43,7 @@ const productsData = [
     subCategory: "Millet Muesli",
     desc: "Indulgent Belgian dark chocolate blended with 30% millets and jumbo oats.",
     image: "/productmockups/MILLET MUESLI/Multi Millet Muesli - Dark Chocolate.png",
+    amazonLink: "https://www.amazon.in/dp/B0GNMNJPY2",
   },
 
   // QUINOA MUESLI & FLAKES
@@ -51,6 +54,7 @@ const productsData = [
     subCategory: "Quinoa Muesli",
     desc: "Premium quinoa flakes mixed with luscious fruits, honey, and crunchy nuts.",
     image: "/productmockups/QUINOA/Quinoa Muesli Fruit & Nut.png",
+    amazonLink: "https://www.amazon.in/dp/B0FP51Q6TT",
   },
   {
     id: 5,
@@ -59,6 +63,7 @@ const productsData = [
     subCategory: "Quinoa Flakes",
     desc: "Nutritious chocolatey quinoa flakes for a delicious, healthy morning.",
     image: "/productmockups/QUINOA/Quinoa Choco Flakes.png",
+    amazonLink: "https://www.amazon.in/dp/B0FP2HCC9C",
   },
   {
     id: 6,
@@ -67,6 +72,7 @@ const productsData = [
     subCategory: "Quinoa Flakes",
     desc: "Quinoa cereal flakes sweetened with natural honey and loaded with almond slices.",
     image: "/productmockups/QUINOA/Quinoa CF- Honey & Almond.png",
+    amazonLink: "https://www.amazon.in/dp/B0FP1SY88K",
   },
 
   // BARS
@@ -77,6 +83,7 @@ const productsData = [
     subCategory: "Energy Bars",
     desc: "Rich almond and chocolate energy bar for quick sustained energy.",
     image: "/productmockups/BARS/Energy Bars/Almond Choco Energy Bar.png",
+    amazonLink: "",
   },
   {
     id: 8,
@@ -85,6 +92,7 @@ const productsData = [
     subCategory: "Energy Bars",
     desc: "Tart cranberries and dark chocolate crisps for an active lifestyle.",
     image: "/productmockups/BARS/Energy Bars/Cranberry Choco Energy Bar.png",
+    amazonLink: "",
   },
   {
     id: 9,
@@ -93,6 +101,7 @@ const productsData = [
     subCategory: "Protein Bars",
     desc: "Wholesome, high-protein meal replacement bar with super grains and seeds.",
     image: "/productmockups/BARS/Protein Bars/Meal Replacement Bar.png",
+    amazonLink: "",
   },
   {
     id: 10,
@@ -101,6 +110,7 @@ const productsData = [
     subCategory: "Millet Bars",
     desc: "Savory and sweet peanut-millet bar, perfect for post-workout snacking.",
     image: "/productmockups/BARS/Millet Bars/Millet Bar - Peanut.png",
+    amazonLink: "https://www.amazon.in/Farmik-Millet-Bar-Protein-Rich-Go/dp/B0GD17D7DM/ref=sr_1_4?crid=154EUHSZNFNNF&dib=eyJ2IjoiMSJ9.h__G_qTPVVvOjNQPYU5NPpxLjMp6aY5ZxYXyr3IRbQ6U0MMzO640NlpV1zG4FAAhotjfJixRzyJHbDgAQmpndfyIGhzreEPXan9SIlBFryGijficTFSRTGNd3tCxcpXTZJwlC9y6E5_0hl3hqt-_1LG7OOZSoTfRuVBaMaZkOecItBPc9Bz7YnWq4d0uFM4eCPqcxbVL_W7ubS5dW5ZPcI-_DYDp4xklWp-Pbi6ofaVercjD5QOxfjM5PWqYtOtOKP0XKR0Z7neC2ezhhnbDXUjoMcEsZZ8oqqDktLzDpEs.Vm7kcIlIveuYqAjvg8T1oMwytF8QJIw5jE-g4qtYVkg&dib_tag=se&keywords=millet+bar+peanut+farmik&nsdOptOutParam=true&qid=1781515552&s=grocery&sprefix=millet+bar+peanut+farmik%2Cgrocery%2C225&sr=1-4",
   },
   {
     id: 11,
@@ -109,6 +119,7 @@ const productsData = [
     subCategory: "Millet Bars",
     desc: "Enriched with natural berries, dates, and puffed millets.",
     image: "/productmockups/BARS/Millet Bars/Millet Bar - Fruit & Berries.png",
+    amazonLink: "https://www.amazon.in/dp/B0GD1293W2",
   },
   {
     id: 12,
@@ -117,6 +128,7 @@ const productsData = [
     subCategory: "Millet Bars",
     desc: "Nutrient-dense bar loaded with pumpkin seeds, sunflower seeds, and almonds.",
     image: "/productmockups/BARS/Millet Bars/Millet Bar - Seeds & Nuts.png",
+    amazonLink: "https://www.amazon.in/dp/B0GD16XQSC",
   },
 
   // MILLET CEREAL FLAKES
@@ -127,6 +139,7 @@ const productsData = [
     subCategory: "Millet Cereal Flakes",
     desc: "Crispy, wholesome flakes made from 100% natural sorghum millet.",
     image: "/productmockups/MILLET CEREAL FLAKES/Millet CF - Sorghum Millet.png",
+    amazonLink: "https://www.amazon.in/dp/B0FNK9ZCK1",
   },
   {
     id: 14,
@@ -135,6 +148,7 @@ const productsData = [
     subCategory: "Millet Cereal Flakes",
     desc: "Calcium-rich ragi (finger millet) flakes for a powerful start to your day.",
     image: "/productmockups/MILLET CEREAL FLAKES/Millet CF- Finger Millet.png",
+    amazonLink: "https://www.amazon.in/dp/B0FP1PWY4D",
   },
   {
     id: 15,
@@ -143,6 +157,7 @@ const productsData = [
     subCategory: "Millet Cereal Flakes",
     desc: "Iron-rich bajra (pearl millet) flakes to keep you energized all day.",
     image: "/productmockups/MILLET CEREAL FLAKES/Millet CF- Pearl Millet.png",
+    amazonLink: "https://amzn.in/d/0227ne6r",
   },
 
   // MILK MIXES
@@ -153,6 +168,7 @@ const productsData = [
     subCategory: "Milk Mixes",
     desc: "Delicious vanilla-flavored multigrain health mix powder.",
     image: "/productmockups/MILK MIXES/Multigrain Mix Powder- Vanilla.png",
+    amazonLink: "https://www.amazon.in/dp/B0GNM6XB71",
   },
   {
     id: 17,
@@ -161,94 +177,123 @@ const productsData = [
     subCategory: "Milk Mixes",
     desc: "Refreshing strawberry-infused multigrain nutrition drink mix.",
     image: "/productmockups/MILK MIXES/Multigrain Mix Powder- Strawberry.png",
+    amazonLink: "https://www.amazon.in/dp/B0GNMC8QLN",
+  },
+   {
+    id: 18,
+    name: "Super grains -Chocolate",
+    category: "Milk Mixes",
+    subCategory: "Milk Mixes",
+    desc: "Rich chocolatey flavor meets wholesome goodness.",
+    image: "/productmockups/MILK MIXES/Chocolate.png",
+    amazonLink: "",
+  },
+   {
+    id: 19,
+    name: "Super grains - Malt",
+    category: "Milk Mixes",
+    subCategory: "Milk Mixes",
+    desc: "Rich traditional malt flavor combined with essential grains for health.",
+    image: "/productmockups/MILK MIXES/Malt.png",
+    amazonLink: "",
   },
 
   // SNACKS: Quinoa Balls
   {
-    id: 18,
+    id: 20,
     name: "Quinoa Balls - Desi Masala",
     category: "Snacks",
     subCategory: "Quinoa Balls",
     desc: "Spicy and tangy Indian masala-flavored roasted quinoa balls.",
     image: "/productmockups/SNACKS/Quinoa Balls/Quinoa Balls- Desi Masala.png",
+    amazonLink: "",
   },
   {
-    id: 19,
+    id: 21,
     name: "Quinoa Balls - Korean BBQ",
     category: "Snacks",
     subCategory: "Quinoa Balls",
     desc: "Sweet and savory Korean BBQ-style seasoned quinoa balls.",
     image: "/productmockups/SNACKS/Quinoa Balls/Quinoa Balls- Korean BBQ.png",
+    amazonLink: "",
   },
 
   // SNACKS: Porridges
   {
-    id: 20,
+    id: 22,
     name: "Millet Porridge - Mixed Fruit & Chocolate",
     category: "Snacks",
     subCategory: "Porridges",
     desc: "Nutritious chocolate porridge mixed with real dehydrated fruit pieces.",
     image: "/productmockups/SNACKS/Porridges/Millet Porridge- Mixed Fruit & Chocolate.png",
+    amazonLink: "https://www.amazon.in/dp/B0FPMFMJD5",
   },
   {
-    id: 21,
+    id: 23,
     name: "Millet Porridge - Mixed Vegetables",
     category: "Snacks",
     subCategory: "Porridges",
     desc: "Savory veggie-loaded millet porridge for a warm, comforting meal.",
     image: "/productmockups/SNACKS/Porridges/Millet Porridge- Mixed Vegetables.png",
+    amazonLink: "https://www.amazon.in/dp/B0FPMLP71X",
   },
   {
-    id: 22,
+    id: 24,
     name: "Millet Porridge - Apple & Cinnamon",
     category: "Snacks",
     subCategory: "Porridges",
     desc: "Classic sweet porridge loaded with apple flavor and a hint of cinnamon.",
     image: "/productmockups/SNACKS/Porridges/Millet Porridge- Apple & Cinnamon.png",
+    amazonLink: "https://www.amazon.in/dp/B0FPMMLXT2",
   },
   {
-    id: 23,
+    id: 25,
     name: "Millet Porridge - Tangy Tomato & Onion",
     category: "Snacks",
     subCategory: "Porridges",
     desc: "Zesty Indian tomato-onion savory porridge mix.",
     image: "/productmockups/SNACKS/Porridges/Millet Porridge- Tangy Tomato & Onion.png",
+    amazonLink: "https://www.amazon.in/dp/B0FPMP4PV4",
   },
 
   // SNACKS: Wavy Chips
   {
-    id: 24,
+    id: 26,
     name: "Wavy Chips - Peri Peri",
     category: "Snacks",
     subCategory: "Wavy Chips",
     desc: "Crispy and spicy peri peri seasoned wavy millet chips.",
     image: "/productmockups/SNACKS/Wavy Chips/Wavy Chips- Peri Peri.png",
+    amazonLink: "",
   },
   {
-    id: 25,
+    id: 27,
     name: "Wavy Chips - Sour Cream & Onion",
     category: "Snacks",
     subCategory: "Wavy Chips",
     desc: "Creamy sour cream and zesty onion-flavored healthy wavy chips.",
     image: "/productmockups/SNACKS/Wavy Chips/Wavy Chips- Sour Cream & Onion.png",
+    amazonLink: "",
   },
 
   // SNACKS: Makhana
   {
-    id: 26,
+    id: 28,
     name: "Makhana - Cheese Cheddar",
     category: "Snacks",
     subCategory: "Makhana",
     desc: "Gourmet white cheddar cheese seasoned crunchy roasted makhana.",
     image: "/productmockups/SNACKS/MAKHANA/Makhana- Cheese Cheddar.png",
+    amazonLink: "",
   },
   {
-    id: 27,
+    id: 29,
     name: "Makhana - Peri Peri",
     category: "Snacks",
     subCategory: "Makhana",
     desc: "Fiery peri peri seasoned premium roasted foxnuts.",
     image: "/productmockups/SNACKS/MAKHANA/Makhana- Peri Peri.png",
+    amazonLink: "",
   },
 ];
 
@@ -278,8 +323,10 @@ const getProductBadge = (id) => {
     case 9:
       return "High Protein";
     case 18:
+    case 19:
+    case 20:
       return "New Launch";
-    case 24:
+    case 26:
       return "Popular Choice";
     default:
       return null;
@@ -380,7 +427,7 @@ export default function PremiumFarmikProducts() {
             >
               {/* STICKY SIDE HERO CARD */}
               <div className="w-full lg:w-[300px] shrink-0 lg:sticky lg:top-28">
-                <div className="bg-brand-green rounded-3xl p-8 flex flex-col justify-between text-white shadow-md hover:shadow-xl transition-all duration-500 h-[520px] relative overflow-hidden group border border-black/5">
+                <div className="bg-brand-green rounded-3xl p-8 flex flex-col justify-between text-white shadow-md hover:shadow-xl transition-all duration-500 h-[380px] lg:h-[520px] relative overflow-hidden group border border-black/5">
                   {/* Subtle Background Pattern */}
                   <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
                   
@@ -395,13 +442,13 @@ export default function PremiumFarmikProducts() {
                         Series
                       </span>
                     </h2>
-                    <p className="text-xs text-green-50/80 leading-relaxed font-normal mb-6">
+                    <p className="text-xs text-green-50/80 leading-relaxed font-normal mb-6 hidden lg:block">
                       Wholesome {subName} selection carefully curated to preserve clean, pure nutrients.
                     </p>
                   </div>
 
                   {/* Image – fills the card directly, no white box */}
-                  <div className="relative w-full h-64 flex-shrink-0">
+                  <div className="relative w-full h-40 lg:h-64 flex-shrink-0">
                     <Image
                       src={subCategorySideImages[subName] || "/Cereal.jpeg"}
                       alt={`${subName} Category Visual`}
@@ -461,12 +508,21 @@ export default function PremiumFarmikProducts() {
                         </p>
 
                         <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
-                          <button 
-                            onClick={() => window.location.href = `/contact?subject=Inquiry about ${encodeURIComponent(product.name)}`}
-                            className="bg-brand-green hover:bg-brand-green-hover text-white font-bold text-[10px] tracking-wider uppercase px-4 py-2 rounded-full cursor-pointer transition-all duration-200 shadow-sm hover:shadow"
-                          >
-                            ENQUIRE NOW
-                          </button>
+                          {product.amazonLink ? (
+                            <button 
+                              onClick={() => window.open(product.amazonLink, "_blank")}
+                              className="bg-brand-green hover:bg-brand-green-hover text-white font-bold text-[10px] tracking-wider uppercase px-4 py-2 rounded-full cursor-pointer transition-all duration-200 shadow-sm hover:shadow w-full text-center"
+                            >
+                              BUY ON AMAZON
+                            </button>
+                          ) : (
+                            <button 
+                              disabled
+                              className="bg-gray-150 text-gray-400 font-bold text-[10px] tracking-wider uppercase px-4 py-2 rounded-full w-full text-center cursor-not-allowed"
+                            >
+                              COMING SOON
+                            </button>
+                          )}
                         </div>
                       </div>
                     </motion.div>

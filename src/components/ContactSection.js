@@ -98,7 +98,7 @@ export default function ContactSection() {
 
       {/* ── CONTACT METHOD CARDS ── */}
       <section className="px-4 md:px-8 lg:px-16 pb-16">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {contactMethods.map((m, i) => (
             <motion.a
               key={i}

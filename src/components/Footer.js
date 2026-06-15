@@ -20,7 +20,7 @@ export default function Footer() {
           <Link href="/">
             <Image
               src="/Farmik.svg"
-              alt="Farmik Logo"
+              alt="Farmik - healthy cereals and ancient grains"
               width={180}
               height={55}
               className="brightness-0 invert opacity-90"

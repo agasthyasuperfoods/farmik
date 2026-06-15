@@ -17,13 +17,28 @@ function index() {
   return (
     <div className="bg-[#F9F8F4] min-h-screen flex flex-col">
       <Head>
-        <title>Farmik | Elevating Wellness With Smart Nutrition</title>
+        <title>Farmik</title>
+        <meta property="og:title" content="Farmik" />
+        <meta name="twitter:title" content="Farmik" />
         <meta name="description" content="Explore Farmik's premium range of internationally certified organic superfoods, healthy grains, millets, and cereals. Made with love and ancient dietary wisdom." />
         
         {/* Favicon / Icon definitions for browsers & search engines */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.png" type="image/png" sizes="512x512" />
         <link rel="apple-touch-icon" href="/icon.png" />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Farmik",
+              "url": "https://www.farmikfoods.com"
+            })
+          }}
+        />
       </Head>
 
       {/* Navigation */}

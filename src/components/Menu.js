@@ -19,7 +19,7 @@ export default function Menu() {
         <Link href="/">
           <Image
             src="/Farmik.svg"
-            alt="Farmik Logo"
+            alt="Farmik - healthy cereals and ancient grains"
             width={120}
             height={40}
             className="h-10 w-auto"
