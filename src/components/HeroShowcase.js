@@ -51,7 +51,7 @@ export default function HeroShowcase() {
   ];
  
   return (
-    <section className="w-full bg-[var(--main-bg)] lg:h-[calc(100vh-76px)] lg:min-h-[620px] pt-24 md:pt-28 lg:pt-12 pb-6 lg:pb-0 px-4 md:px-8 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 max-w-7xl mx-auto">
+    <section className="w-full bg-[var(--main-bg)] lg:h-[calc(100vh-76px)] lg:min-h-[620px] pt-24 md:pt-28 lg:pt-28 pb-6 lg:pb-0 px-4 md:px-8 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 max-w-7xl mx-auto">
       
       {/* Left Column: Copy & Actions */}
       <div className="flex-1 text-center lg:text-left space-y-6 max-w-2xl">

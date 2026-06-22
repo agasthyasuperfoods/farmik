@@ -9,23 +9,23 @@ const contactMethods = [
   {
     icon: <FaWhatsapp size={22} />,
     label: 'WhatsApp',
-    value: '+91 98765 43210',
+    value: '+91 70757 04167',
     desc: 'Chat with us instantly',
-    href: 'https://wa.me/919876543210',
+    href: 'https://wa.me/917075704167',
   },
   {
     icon: <Mail size={22} />,
     label: 'Email',
-    value: 'support@farmik.com',
+    value: 'info.asf@agasthya.co.in',
     desc: 'Drop us a note anytime',
-    href: 'mailto:support@farmik.com',
+    href: 'mailto:info.asf@agasthya.co.in',
   },
   {
     icon: <Phone size={22} />,
     label: 'Call Us',
-    value: '+91 98765 43210',
+    value: '+91 70757 04167',
     desc: 'Mon–Sat, 9am–6pm IST',
-    href: 'tel:+919876543210',
+    href: 'tel:+917075704167',
   },
   {
     icon: <MapPin size={22} />,
@@ -153,23 +153,23 @@ export default function ContactSection() {
                 </p>
 
                 <div className="space-y-5">
-                  <a href="mailto:support@farmik.com" className="flex items-start gap-3 group">
+                  <a href="mailto:info.asf@agasthya.co.in" className="flex items-start gap-3 group">
                     <div className="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center shrink-0 group-hover:bg-white/25 transition-colors">
                       <Mail size={16} />
                     </div>
                     <div>
                       <p className="text-[10px] uppercase tracking-wider text-green-200/70 font-semibold">Email</p>
-                      <p className="text-sm font-semibold">support@farmik.com</p>
+                      <p className="text-sm font-semibold">info.asf@agasthya.co.in</p>
                     </div>
                   </a>
 
-                  <a href="https://wa.me/919876543210" className="flex items-start gap-3 group">
+                  <a href="https://wa.me/917075704167" className="flex items-start gap-3 group">
                     <div className="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center shrink-0 group-hover:bg-white/25 transition-colors">
                       <FaWhatsapp size={16} />
                     </div>
                     <div>
                       <p className="text-[10px] uppercase tracking-wider text-green-200/70 font-semibold">WhatsApp</p>
-                      <p className="text-sm font-semibold">+91 98765 43210</p>
+                      <p className="text-sm font-semibold">+91 70757 04167</p>
                     </div>
                   </a>
 
